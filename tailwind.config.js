@@ -7,7 +7,15 @@ module.exports = {
   ],
   darkMode: ["class"],
   theme: {
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: '100ch'
+          }
+        }
+      })
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 }
