@@ -61,23 +61,27 @@ Here are the results from the latest build of the application:
 
 ### Route (app)
 
-Route (app)                                Size     First Load JS
-┌ ○ /                                      6.92 kB        83.8 kB
-├ ○ /favicon.ico                           0 B                0 B
-└ λ /post/[id]                             137 B          77.1 kB
-+ First Load JS shared by all              76.9 kB
-  ├ chunks/139-1a84ca5c2ef8989a.js         24.5 kB
-  ├ chunks/2443530c-5211866815ab9e96.js    50.5 kB
-  ├ chunks/main-app-b2156cf0d1b07269.js    211 B
-  └ chunks/webpack-5ab2db368106a6cc.js     1.74 kB
+| Route                 | Size    | First Load JS |
+|-----------------------|---------|----------------|
+| ○ /                   | 6.92 kB | 83.8 kB        |
+| ○ /favicon.ico        | 0 B     | 0 B            |
+| λ /post/[id]         | 137 B   | 77.1 kB        |
+| **First Load JS shared by all** | **76.9 kB** |                |
+| chunks/139-1a84ca5c2ef8989a.js  | 24.5 kB |                |
+| chunks/2443530c-5211866815ab9e96.js | 50.5 kB |          |
+| chunks/main-app-b2156cf0d1b07269.js | 211 B |               |
+| chunks/webpack-5ab2db368106a6cc.js  | 1.74 kB |               |
 
-Route (pages)                              Size     First Load JS
-─ ○ /404                                   178 B            86 kB
-+ First Load JS shared by all              85.9 kB
-  ├ chunks/main-baa976299fb597e3.js        83.9 kB
-  ├ chunks/pages/_app-c544d6df833bfd4a.js  192 B
-  └ chunks/webpack-5ab2db368106a6cc.js     1.74 kB
+### Route (pages)
 
-λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
-○  (Static)  automatically rendered as static HTML (uses no initial props)
+| Route                | Size   | First Load JS |
+|----------------------|--------|----------------|
+| ○ /404               | 178 B  | 86 kB          |
+| **First Load JS shared by all** | **85.9 kB**  |               |
+| chunks/main-baa976299fb597e3.js  | 83.9 kB |               |
+| chunks/pages/_app-c544d6df833bfd4a.js | 192 B |          |
+| chunks/webpack-5ab2db368106a6cc.js  | 1.74 kB |              |
 
+**Notes**:
+- λ  (Server) - server-side renders at runtime (uses `getInitialProps` or `getServerSideProps`).
+- ○  (Static) - automatically rendered as static HTML (uses no initial props).
